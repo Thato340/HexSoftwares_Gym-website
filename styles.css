@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+:root {
+  --primary: #ff4d4d;       
+  --secondary: #00ffaa;     
+  --dark: #121212;          
+  --darker: #0a0a0a;        
+  --light: #f0f0f0;         
+  --gray: #333;             
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: var(--darker);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.logo {
+    font-size: 32px; 
+    font-weight: 700;
+    color: var(--light);
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+  }
+  
+  .logo span {
+    color: var(--primary);
+    font-size: 36px; 
+  }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--light);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.cta-button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: var(--dark);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 255, 170, 0.5);
+}
+
+
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+      url('images/gym-banner.jpg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  color: var(--light);
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  color: var(--light);
+}
+
+
+.features {
+  padding: 80px 10%;
+  text-align: center;
+  background: var(--darker);
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--secondary);
+}
+
+.facilities {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.facility-card {
+  background: var(--gray);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+}
+
+.facility-card img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  transition: all 0.3s;
+}
+
+.facility-card:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px var(--primary));
+}
+
+
+.trainers {
+  padding: 80px 10%;
+  background: var(--gray);
+  text-align: center;
+}
+
+.trainers h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--secondary);
+}
+
+.trainer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.trainer-card {
+  background: var(--darker);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(255, 77, 77, 0.3);
+}
+
+.trainer-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.trainer-card h3 {
+  margin: 15px 0 5px;
+  color: var(--primary);
+}
+
+.trainer-card p {
+  color: var(--light);
+  padding-bottom: 20px;
+}
+
+
+.pricing {
+  padding: 80px 10%;
+  text-align: center;
+  background: var(--darker);
+}
+
+.pricing h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--secondary);
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  background: var(--gray);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-card.popular {
+  border: 2px solid var(--secondary);
+}
+
+.price-card.popular::before {
+  content: "Most Popular";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--secondary);
+  color: var(--dark);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.price-card .price {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: var(--primary);
+}
+
+.price-card .price span {
+  font-size: 16px;
+  color: var(--light);
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.price-card ul li {
+  margin: 10px 0;
+  color: var(--light);
+}
+
+
+.contact {
+  padding: 80px 10%;
+  background: var(--gray);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--secondary);
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 15px;
+  background: var(--darker);
+  border: 1px solid var(--dark);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--light);
+}
+
+.contact textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+
+footer {
+  background: var(--darker);
+  color: var(--light);
+  text-align: center;
+  padding: 30px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--light);
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary);
+}
+
+
+img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links {
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin: 5px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .facilities, .trainer-cards, .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
